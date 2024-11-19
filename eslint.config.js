@@ -9,7 +9,7 @@ import prettierConfig from 'eslint-config-prettier'
 
 export default tseslint.config(
   {
-    ignores: ['src/api/**', 'dist/'],
+    ignores: ['dist/'],
   },
   {
     languageOptions: {
