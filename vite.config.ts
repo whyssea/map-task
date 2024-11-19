@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import viteTsPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(() => ({
   plugins: [react(), viteTsPaths()],
-})
+  base: '/map-task/',
+}))
