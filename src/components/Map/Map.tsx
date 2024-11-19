@@ -28,12 +28,8 @@ export const Map = () => {
         setDestination(res)
         return res.location
       })
-      .then((location) =>
-        findDirection(coordinates, location)?.then((res) => {
-          setIsLoading(false)
-          setRoute(res)
-        }),
-      )
+      .then((location) => findDirection(coordinates, location)?.then((res) => setRoute(res)))
+      .finally(() => setIsLoading(false))
   }
 
   return (
